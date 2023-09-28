@@ -1,0 +1,19 @@
+{
+    "1" : {
+        "nao": "do you prefer dancing or singing?", 
+        "expected_response": null, 
+        "default": "dancing", 
+        "next": 2,
+        "skip": 2, 
+        "dfid": "answer_null" 
+    },
+
+    "2" : {
+        "nao": "would you like to repeat the game?", 
+          "expected_response": "$yes", 
+          "default": "yes", 
+          "next": -1,
+          "skip": -1, 
+          "dfid": "answer_yes" 
+      }
+}

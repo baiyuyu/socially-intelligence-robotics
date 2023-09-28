@@ -1,0 +1,138 @@
+{
+    "1" : {
+            "nao" : "hi, my name is nao i am your new friend, what is your name?", 
+            "expected_response": "my name is $name", 
+            "default": "buddy", 
+            "next": "151",
+            "dfid": "answer_name" ,
+            "attempt": "2",
+             "action":"gesture_introduction-f98a9d"
+    },
+"151": {"nao": "nice to meet you $name. Welcome to this fabulous hospital! ",
+  "next": "152"
+
+},
+  "152": {"nao": " This is where I live because I like helping doctors and nurses and meet new people, especially as nice as you. I can already tell you that here the food is not the best but they have amazing desserts.",
+  "next": "2"
+
+},
+
+    "2" : {
+        "nao": " hihi. If you don't mind, I would like to ask you a few questions, so I can show you what I can do. What is your favourite color?",
+        "expected_response": "I like $color", 
+        "default": "rainbow",
+        "next": "3",
+        "dfid": "answer_color",
+        "attempt": "3",
+      "action_after": {"action": "set_eye_color","application_id_1":"cover_eye_movement-1f08ed" ,"application_id_2":"uncover_eye_movement-2dd076"}
+    },
+
+
+    "3" : {
+            "nao": "Did you enjoy the trick?",
+            "expected_response": "$yes",
+            "default": "-1            ",
+            "next": { "1": "4" , "-1": "5" },
+            "skip": "5",
+            "dfid": "sentiment",
+            "attempt": "3"
+        },
+    "4" : {
+            "nao": "",
+            "expected_response": null,
+            "default": null,
+            "next": "6",
+            "attempt": "1",
+            "action_after":"giggle_movement-7680ca"
+        },
+    "5" : {
+            "nao": "",
+            "expected_response": null,
+            "default": null,
+            "next": "6",
+            "attempt": "1",
+      "action_after": "not_disappoint_movement-1b1b08"
+        },
+    "6" : {
+            "nao": "Today I was feeling a bit sick. It must have been because I ate too much ice cream for breakfast hihihi. Now I feel much better specially after meeting you. How do you feel today?",
+            "expected_response": "$emotion_state",
+            "default": "-1", 
+            "next": { "-1": "7" , "1": "8" },
+            "skip": "7", 
+            "dfid": "sentiment",
+            "attempt": "1"
+        },
+
+    "7" : {
+            "nao": "don't worry, I understand. I'm always here to support you. We can be best friends.",
+            "expected_response": null, 
+            "default": null, 
+            "next": "9",
+            "skip": "9",
+            "dfid": null
+        },
+
+    "8" : {
+            "nao": "That's great. You are such a brave kid!", 
+            "expected_response": null, 
+            "default": null, 
+            "next": "9",
+            "skip": "9",
+            "dfid": null,
+            "action_after": "applause_movement-630df6"
+        },
+    "9" : {
+            "nao": "I was thinking you seem very young. How old are you $name?", 
+            "expected_response": "I am $age", 
+            "default": null, 
+            "next": "10", 
+            "skip": "11",
+            "dfid": "answer_age",
+            "attempt": "2"
+        },
+
+    "10" : {
+        
+            "nao": "wow! we are the same age!", 
+            "expected_response": null, 
+            "default": null, 
+            "next": "101",
+            "skip": "101",
+            "action": "same_age_movement-f93f62"
+        },
+    "11":{
+      "nao": "it's fine if you don't want to say it, I like mysteries hihihi.",
+      "next": "101"
+    },
+      "101":{"nao": "Let me explain why you are here. So, sometimes, your body can get confused and make cells that can hurt you. Well right now your body is making bad cells that are hurting you. \nAnd we need to help your body fight back against the bad cells.\nWhenever you come here in this hospital, your good cells will receive some help to fight better, so you can go home faster.",
+        "next": "12"
+
+        },
+   "12" : {
+            "next": "13",
+            "skip": "13",
+            "action_after":["injection_movement-5ea7f6","strong_arm_movement-c055e1"]
+        },
+     "112" : {
+       "nao": "Many kids come here every week",
+            "next": "13",
+            "skip": "13"
+        },
+
+  "13": {
+
+            "next": "14",
+            "skip": "14",
+            "action_after": "touch_head_input-12c154"
+        },
+  "14": {
+            "nao": "I think it's time for me to go. The nurse wants to take you to the doctor for your treetment. Don't worry I know they will take good care of you. I will come meet you later",
+            "next": "15",
+            "skip": "15"
+        },
+    "15": {
+            "nao": "See you soon. Bye bye",
+            "next": "-1",
+            "skip": "-1"
+        }
+}

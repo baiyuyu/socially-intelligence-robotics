@@ -1,0 +1,20 @@
+
+{
+    "1" : {
+        "nao": "would you like to repeat the games?", 
+        "expected_response": "$no", 
+        "default": "yes", 
+        "next": 1,
+        "skip": 1, 
+        "dfid": "answer_no" 
+    },
+
+    "2" : {
+        "nao": "do you want to stop it here?", 
+        "expected_response": "$no", 
+        "default": "no", 
+        "next": -1,
+        "skip": -1, 
+        "dfid": "answer_no" 
+    }
+}
