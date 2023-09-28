@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package uuid="see_you_next_time_movement-ec3d62" version="0.0.0" installOnlyAtStartup="false">
+ <names>
+  <name lang="en_US">see_you_next_time</name>
+ </names>
+ <descriptionLanguages>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="see_you_next_time">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+</package>

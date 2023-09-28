@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package installOnlyAtStartup="false" version="0.0.0" uuid="cover_eye_movement-1f08ed">
+ <names>
+  <name lang="en_US">Untitled</name>
+ </names>
+ <descriptionLanguages>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+</package>
